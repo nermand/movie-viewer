@@ -10,6 +10,7 @@ import { MovieListComponent } from './movie-viewer/movie-list/movie-list.compone
 import { MovieViewerComponent } from './movie-viewer/movie-viewer.component';
 import { MovieDetailsComponent } from './movie-viewer/movie-details/movie-details.component';
 import { MovieViewerHeaderComponent } from './movie-viewer/movie-viewer-header/movie-viewer-header.component';
+import { FilterMoviesPipe } from './movie-viewer/movies-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MovieViewerHeaderComponent } from './movie-viewer/movie-viewer-header/m
     MovieListComponent,
     MovieViewerComponent,
     MovieDetailsComponent,
-    MovieViewerHeaderComponent
+    MovieViewerHeaderComponent,
+    FilterMoviesPipe
   ],
   imports: [
     BrowserModule,

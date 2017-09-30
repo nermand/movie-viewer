@@ -8,9 +8,10 @@ import { MoviesService } from './movies.service';
   styleUrls: ['./movie-viewer.component.scss'],
   providers: [MoviesService]
 })
-export class MovieViewerComponent implements OnInit {
-  constructor() { }
+export class MovieViewerComponent {
+    filter: string;
 
-  ngOnInit() {
-  }
+    search($event) {
+        this.filter = $event;
+    }
 }

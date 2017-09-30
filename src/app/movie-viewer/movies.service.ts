@@ -25,13 +25,7 @@ export class MoviesService {
                     const data = this.parseMovies(response.json());
                     this.movies = data;
                     this.moviesLoaded.next(this.movies);
-                    console.info('Movies loaded');
                     return this.movies;
-                }
-            )
-            .catch(
-                (error: Response) => {
-                    return Observable.throw('Something went wrong');
                 }
             );
     }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { MoviesService } from '../movies.service';
 import { Movie } from '../movie.model';
@@ -10,6 +10,7 @@ import { Movie } from '../movie.model';
 })
 export class MovieListComponent implements OnInit {
     movies: Movie[];
+    @Input() filter: string;
 
     constructor(private moviesService: MoviesService) { }
 
@@ -17,7 +18,9 @@ export class MovieListComponent implements OnInit {
       this.moviesService.getMovies()
           .subscribe(
               (movies) => this.movies = movies,
-              (error) => console.info('Error', error),
+              (error) => {
+                  console.error('Error occurred while obtaining movie list', error);
+              },
           );
     }
 }

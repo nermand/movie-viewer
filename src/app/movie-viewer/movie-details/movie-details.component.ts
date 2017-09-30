@@ -24,7 +24,6 @@ export class MovieDetailsComponent implements OnInit, OnDestroy {
             .subscribe(
                 (params: Params) => {
                     this.id = +params['id'];
-                    console.info('ID', this.id);
                     this.movie = this.moviesService.getMovie(this.id);
                 }
             );
