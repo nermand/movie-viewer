@@ -1,0 +1,18 @@
+div.table-container {
+    height: 400px;
+    overflow-y: auto;
+
+	tr {
+		cursor: pointer;
+		span.glyphicon-play {
+			display: none;
+		}
+
+		&.active {
+			font-weight: bold;
+			span.glyphicon-play {
+				display: block;
+			}
+		}
+	}
+}

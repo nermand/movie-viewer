@@ -1,0 +1,18 @@
+<div *ngIf="movie">
+    <div class="row">
+        <div class="col-md-12">
+            <img class="img-responsive pull-left" [src]="movie.posterPath" />
+            <p>{{ movie.overview }}</p>
+        </div>
+    </div>
+    <div class="row bottom">
+        <div class="col-md-4">
+        	<h3 class="release-date">Release Date</h3>
+            <span>{{ movie.releaseDate | date }}</span>
+        </div>
+        <div class="col-md-4">
+        	<h3>Rating</h3>
+            <rating [(ngModel)]="movie.voteAverage" [readonly]="true" [float]="true"></rating>
+        </div>
+    </div>
+</div>

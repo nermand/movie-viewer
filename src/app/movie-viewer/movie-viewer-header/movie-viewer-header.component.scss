@@ -1,0 +1,18 @@
+h1 {
+	cursor: pointer;
+	user-select: none;
+}
+
+.right-inner-addon {
+    position: relative;
+    margin-top: 10px;
+
+    .glyphicon {
+    	position: absolute;
+    	left: 0;
+    }
+
+    input {
+    	padding-left:  30px;
+    }
+}

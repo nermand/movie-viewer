@@ -1,0 +1,18 @@
+img {
+	padding-right: 20px;
+}
+
+div.bottom {
+	display: flex;
+	justify-content: flex-end;
+
+	h3 {
+		opacity: 0.7;
+		&.release-date {
+			padding-bottom: 12px;
+		}
+	}
+	span {
+		font-weight: bold;
+	}
+}
